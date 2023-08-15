@@ -1,5 +1,7 @@
 import random
-while True:
+
+#自訂的function
+def play_game():
     min = 1
     max = 100
     target = random.randint(min,max)
@@ -17,18 +19,3 @@ while True:
             elif(keyin > target):            
                 print("再小一點")
                 max = keyin-1
-                
-            elif(keyin < target):
-                print("再大一點")
-                min = keyin + 1
-                
-            print(f"您已經猜了{count}次")
-        else:
-            print("超出範圍")
-    play_again = input("您還要繼續嗎?(y or n):")
-    if play_again == 'n':        
-        break
-    else:
-        continue
-
-print("遊戲結束")
